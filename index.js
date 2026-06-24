@@ -16,21 +16,29 @@
                 return changes[index];
             },
             previous: function() {
+                var wrapped = false;
                 do {
                     index--;
                     if (index < 0) {
                         index = length-1;
-                        break;
+                        if (wrapped) {
+                            break;
+                        }
+                        wrapped = true;
                     }
                 } while (!isRendered(changes[index]));
                 return changes[index];
             },
             next: function() {
+                var wrapped = false;
                 do {
                     index++;
                     if (index >= length) {
                         index = 0;
-                        break;
+                        if (wrapped) {
+                            break;
+                        }
+                        wrapped = true;
                     }
                 } while (!isRendered(changes[index]));
                 return changes[index];
