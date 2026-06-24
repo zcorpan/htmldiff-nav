@@ -89,7 +89,7 @@
         var BUTTON_CSS_TEXT = "appearance: none; float: left; padding: 5px 15px; border: none; border-left: 1px solid #999; font: inherit; background-color: transparent; color: inherit;";
         var LABEL_CSS_TEXT = "float: left; padding: 1px 5px; border: none; border-left: 1px solid #999;";
         var CHECKBOX_CSS_TEXT = "vertical-align: middle;";
-        var CSS_BORDER = "border-bottom: 2px solid #00F;";
+        var CSS_BORDER = "border-bottom: 2px solid #00F; border-bottom-color: light-dark(#00F, #DDD)";
         var container = document.createElement("div");
         var display = document.createElement("div");
         var old = createCheckbox("old", toggleHideOld, "htmldiffOldChecked", true);
